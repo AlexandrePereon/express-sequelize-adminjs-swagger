@@ -2,7 +2,7 @@ import { type BrandingOptions } from 'adminjs'
 
 export const brandingOptions: BrandingOptions = {
     companyName: 'Test Website',
-    logo: '/logoSemBackground2.png',
+    // logo: '/logo.png',
     // theme: {
     //     colors: {
     //         primary100: '#ff0043',
