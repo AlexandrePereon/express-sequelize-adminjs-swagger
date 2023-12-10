@@ -1,0 +1,7 @@
+docker run --name test-mysql -e MYSQL_ROOT_PASSWORD='DB_PASS' -p 3306:3306 -d mysql:8.0-debian
+
+# For other DB User
+mysql -u root -p
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
