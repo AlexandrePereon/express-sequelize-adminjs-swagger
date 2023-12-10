@@ -7,8 +7,8 @@ import { usersController } from './controllers/userController'
 import { ensureAuth } from './middlewares/auth'
 
 const router = express.Router()
-const serverUrl = process.env.SERVER_IP
-const serverPort = process.env.SERVER_PORT
+const serverUrl = process.env.API_HOST
+const serverPort = process.env.API_PORT
 
 // Swagger definition
 const swaggerOptions = {

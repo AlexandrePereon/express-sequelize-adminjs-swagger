@@ -14,7 +14,7 @@ app.use(adminJs.options.rootPath, adminJsRouter)
 app.use(cors())
 app.use(router)
 
-const PORT = process.env.SERVER_PORT
+const PORT = process.env.API_PORT
 
 app.listen(PORT, () => {
     console.log('Starting database connection...')

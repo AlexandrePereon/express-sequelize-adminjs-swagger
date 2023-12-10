@@ -5,7 +5,7 @@ module.exports = {
     },
     "extends": ["standard-with-typescript", "prettier"],
     "plugins": ["prettier"],
-    "ignorePatterns": ["node_modules/"],
+    "ignorePatterns": ["node_modules/", "dist/",".eslintrc.js"],
     "overrides": [
         {
             "env": {
