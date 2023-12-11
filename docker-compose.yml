@@ -2,7 +2,7 @@ version: '3'
 services:
   mysql:
     image: mysql:8.0-debian
-    container_name: test-mysql
+    container_name: api-mysql
     command: --skip-initialize-insecure
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASS}

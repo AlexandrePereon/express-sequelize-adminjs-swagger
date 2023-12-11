@@ -35,7 +35,15 @@ const userResourceOptions: ResourceOptions = {
         'createdAt',
         'updatedAt',
     ],
-    listProperties: ['id', 'firstName', 'email', 'role'],
+    listProperties: [
+        'id',
+        'firstName',
+        'email',
+        'role',
+        'createdAt',
+        'updatedAt',
+        'deletedAt',
+    ],
     showProperties: [
         'id',
         'firstName',

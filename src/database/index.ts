@@ -11,5 +11,7 @@ export const database = new Sequelize({
     password: process.env.DB_PASS as string,
     define: {
         underscored: true,
+        timestamps: true,
+        paranoid: true,
     },
 })

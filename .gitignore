@@ -3,3 +3,4 @@ uploads/*
 public/thumbnails
 dist/
 .env
+package-lock.json

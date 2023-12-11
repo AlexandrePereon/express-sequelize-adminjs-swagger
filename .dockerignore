@@ -1,1 +1,10 @@
 node_modules
+.eslintrc.js
+.gitignore
+.prettierrc.js
+README.md
+.vscode
+.dockerignore
+.local.env
+Dockerfile.api
+docker-compose.yml

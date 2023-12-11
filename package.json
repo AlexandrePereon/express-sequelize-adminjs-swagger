@@ -21,18 +21,14 @@
   "dependencies": {
     "@adminjs/express": "~4.0.1",
     "@adminjs/sequelize": "~2.1.0",
-    "@adminjs/upload": "~2.0.1",
+    
     "adminjs": "~5.5.1",
     "bcrypt": "~5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.0.1",
     "express": "~4.17.2",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^3.6.5",
-    "pg": "~8.7.1",
-    "prettier": "^3.1.0",
     "sequelize": "~6.13.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0"
@@ -51,8 +47,11 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-n": "^16.3.1",
     "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "sequelize-cli": "~6.4.1",
     "ts-node-dev": "~1.1.8",
-    "typescript": "~4.5.4"
+    "typescript": "~4.5.4",
+    "prettier": "^3.1.0"
   }
 }
