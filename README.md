@@ -102,6 +102,8 @@ docker compose up -d
 Admin Panel URL : http://localhost:3000/admin
 
 Example Image:
+![image](https://github.com/AlexandrePereon/express-sequelize-adminjs-swagger/assets/146815155/f0cdf609-5817-4875-ad30-27ccad0984be)
+![image](https://github.com/AlexandrePereon/express-sequelize-adminjs-swagger/assets/146815155/7c7d7597-1546-4937-9548-ad54d2d82211)
 
 #### Modification Location:
 
@@ -112,6 +114,7 @@ To modify the content of the Admin Panel, navigate to the `src/adminjs` folder. 
 Swagger Documentation URL : http://localhost:3000/api-docs
 
 Example Image:
+![image](https://github.com/AlexandrePereon/express-sequelize-adminjs-swagger/assets/146815155/e0dce3c2-1fe8-4804-a138-abc95e1c51c7)
 
 #### Modification Location:
 
