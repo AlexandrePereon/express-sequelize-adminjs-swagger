@@ -1,20 +1,21 @@
 # Use the official Node.js image
 FROM node:20
 
-# Set the working directory
+# Create a directory where our app will be placed
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+# Copy the file from your host to your current location
 
-# Install dependencies
-RUN npm install --omit=dev
+COPY package.json package-lock.json .sequelizerc .env /app/
 
-# Copy the rest of the application code to the working directory
-COPY . .
+COPY /config/sequelizeCli.js /app/config/
 
-# Build the application
-RUN npm run build
+COPY ./scripts /app/scripts
 
-# Expose the port your app runs on
+COPY ./dist /app/dist
+
+# Install production dependencies
+RUN npm install --only=production
+
+# Expose port 3000
 EXPOSE 3000

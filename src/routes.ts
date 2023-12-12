@@ -26,7 +26,7 @@ const swaggerOptions = {
         ],
     },
     // Path to the API docs
-    apis: ['./src/routes.ts'],
+    apis: ['./src/routes.ts', './dist/routes.js'],
 }
 const swaggerSpec = swaggerJsdoc(swaggerOptions)
 router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))

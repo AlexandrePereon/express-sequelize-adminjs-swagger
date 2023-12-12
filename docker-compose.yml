@@ -26,7 +26,7 @@ services:
       - mynetwork
     volumes:
       - ./dist:/app/dist
-    command: ["./wait-for-it.sh","-t", "120", "mysql:3306", "--", "./start-api.sh"]
+    command: ["./scripts/wait-for-it.sh","-t", "120", "mysql:3306", "--", "./scripts/start-api.sh"]
     environment:
       DB_HOST: mysql
       DB_PORT: "${DB_PORT:-3306}"
