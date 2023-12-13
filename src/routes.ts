@@ -72,6 +72,12 @@ router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
  *                 type: string
  *               password:
  *                 type: string
+ *               role:
+ *                 type: string
+ *               updatedAt:
+ *                 type: Date
+ *               createdAt:
+ *                 type: Date
  *             required:
  *               - firstName
  *               - lastName

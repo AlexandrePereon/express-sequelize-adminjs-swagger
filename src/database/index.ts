@@ -9,6 +9,7 @@ export const database = new Sequelize({
     database: process.env.DB_NAME as string,
     username: process.env.DB_USER as string,
     password: process.env.DB_PASS as string,
+    logging: false,
     define: {
         underscored: true,
         timestamps: true,

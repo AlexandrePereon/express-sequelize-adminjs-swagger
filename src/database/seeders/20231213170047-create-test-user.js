@@ -2,7 +2,7 @@
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const bcrypt = require('bcrypt')
-const email = 'admin@email.com'
+const email = 'testuser@email.com'
 
 module.exports = {
     async up(queryInterface, Sequelize) {
@@ -10,13 +10,13 @@ module.exports = {
 
         await queryInterface.bulkInsert('users', [
             {
-                first_name: 'Admin',
+                first_name: 'Test',
                 last_name: 'User',
-                phone: '555-5555',
+                phone: '000-0000',
                 birth: '1990-01-01',
                 email,
                 password: hashedPassword,
-                role: 'admin',
+                role: 'user',
                 created_at: new Date(),
                 updated_at: new Date(),
             },

@@ -31,3 +31,5 @@ app.listen(PORT, () => {
     console.log(`Swagger docs available at http://localhost:${PORT}/api-docs`)
     console.log(`Admin panel available at http://localhost:${PORT}/admin`)
 })
+
+export { app }

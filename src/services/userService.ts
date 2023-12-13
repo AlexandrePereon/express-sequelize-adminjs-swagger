@@ -7,9 +7,6 @@ export const userService = {
             where: {
                 email,
             },
-            attributes: {
-                exclude: ['password'],
-            },
         })
         return user
     },
