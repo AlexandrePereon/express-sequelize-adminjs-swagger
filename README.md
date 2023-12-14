@@ -12,20 +12,22 @@ Before you begin, ensure that you have the following prerequisites installed on 
 ## Installation
 
 1. Clone the repository :
+
 ```bash
 git clone https://github.com/AlexandrePereon/express-sequelize-adminjs-swagger.git
 ```
 
 2. Navigate to the project directory :
+
 ```bash
 cd express-sequelize-adminjs-swagger
 ```
 
 3.  Install the dependencies :
+
 ```bash
 npm install
 ```
-
 
 ## Setup .env File
 
@@ -82,9 +84,9 @@ Now, let's set up the database :
     npm run db:migrate
     ```
 
-3. Set up the admin user :
+3. Set up the admin and test user :
     ```bash
-    npm run db:seed:admin
+    npm run db:seed:all
     ```
 
 Now, you're ready to start the development server :
@@ -102,12 +104,14 @@ Remember to check the terminal for any additional information or error messages.
 Ensure that the MySQL server is running with your database created.
 
 1. Build the application :
- ```bash
+
+```bash
 npm run build
 ```
 
 2. Start the server :
- ```bash
+
+```bash
 npm run start
 ```
 
@@ -116,11 +120,13 @@ npm run start
 This deployment includes a MySQL database! Make sure to build the API as shown above before proceeding.
 
 1. Build Docker images :
+
 ```bash
 docker-compose build
 ```
 
 2. Start the application using Docker Compose :
+
 ```bash
 docker compose up -d
 ```
@@ -161,12 +167,13 @@ To enhance your development experience, we recommend using the following Visual 
 
 The project includes several npm scripts for various tasks. Here is a brief description of each command:
 
-- `db:create` : Create the database using Sequelize CLI.
-- `db:migrate` : Run database migrations to apply changes to the database schema.
-- `db:seed:all` : Seed the database with predefined data.
-- `db:seed:undo:all` : Undo all database seeding.
-- `db:seed:admin` : Seed the database with an admin user.
-- `db:drop` : Drop the entire database.
-- `dev`: Start the development server using ts-node-dev.
-- `build` : Compile TypeScript source files into JavaScript.
-- `start` : Start the server using the compiled JavaScript files in the dist directory.
+-   `db:create` : Create the database using Sequelize CLI.
+-   `db:migrate` : Run database migrations to apply changes to the database schema.
+-   `db:seed:all` : Seed the database with predefined data.
+-   `db:seed:undo:all` : Undo all database seeding.
+-   `db:seed:admin` : Seed the database with an admin user.
+-   `db:drop` : Drop the entire database.
+-   `db:test` : Run tests for the API endpoint.
+-   `dev`: Start the development server using ts-node-dev.
+-   `build` : Compile TypeScript source files into JavaScript.
+-   `start` : Start the server using the compiled JavaScript files in the dist directory.

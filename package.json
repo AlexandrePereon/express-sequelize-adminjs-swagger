@@ -11,7 +11,7 @@
     "db:seed:admin": "npx sequelize-cli db:seed --seed 20230328135426-create-admin-user",
     "db:drop": "npx sequelize-cli db:drop",
     "test": "mocha -r ts-node/register 'src/**/*.spec.ts'",
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "dev": "ts-node-dev --transpile-only --inspect --ignore-watch node_modules src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js"
   },
