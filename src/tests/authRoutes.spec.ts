@@ -5,24 +5,26 @@ import { User } from '../models'
 import { before } from 'mocha'
 import { app } from '../server'
 
+const testUser = {
+    firstName: 'Test',
+    lastName: 'User',
+    phone: '000-0000',
+    birth: '1990-01-01',
+    email: 'testuser@email.com',
+    password: '123456',
+}
+
 describe('POST /auth/register', () => {
     // delete test user
     before(async () => {
         await User.destroy({
-            where: { email: 'testuser@email.com' },
+            where: { email: testUser.email },
             force: true,
         })
     })
 
     it('should register a new user', async () => {
-        const res = await request(app).post('/auth/register').send({
-            firstName: 'Test',
-            lastName: 'User',
-            phone: '000-0000',
-            birth: '1990-01-01',
-            email: 'testuser@email.com',
-            password: '123456',
-        })
+        const res = await request(app).post('/auth/register').send(testUser)
 
         expect(res.statusCode).equal(201)
         expect(res.body).to.have.property('id')
@@ -35,18 +37,20 @@ describe('POST /auth/register', () => {
         expect(res.body).to.have.property('role')
         expect(res.body).to.have.property('updatedAt')
         expect(res.body).to.have.property('createdAt')
-
-        // Add more assertions as needed
     })
 
-    // Add more tests for error cases
+    it('should return 409 if email already exists', async () => {
+        const res = await request(app).post('/auth/register').send(testUser)
+
+        expect(res.statusCode).equal(409)
+    })
 })
 
 describe('POST /auth/login', () => {
     it('should authenticate a user and return a token', async () => {
         const res = await request(app).post('/auth/login').send({
-            email: 'testuser@email.com',
-            password: '123456',
+            email: testUser.email,
+            password: testUser.password,
         })
 
         expect(res.statusCode).equal(200)
@@ -55,11 +59,14 @@ describe('POST /auth/login', () => {
         expect(res.body).to.have.property('firstName')
         expect(res.body).to.have.property('email')
         expect(res.body).to.have.property('token')
-
-        // Add more assertions as needed
     })
 
-    // Add more tests for error cases
-})
+    it('should return 404 if email is not found', async () => {
+        const res = await request(app).post('/auth/login').send({
+            email: 'fake@email.com',
+            password: testUser.password,
+        })
 
-// Add more describe blocks for other routes
+        expect(res.statusCode).equal(404)
+    })
+})

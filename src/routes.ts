@@ -153,7 +153,7 @@ router.post('/auth/register', authController.register)
  *               - email
  *               - password
  *     responses:
- *       '200':
+ *       '201':
  *         description: User successfully authenticated
  *         content:
  *           application/json:
@@ -187,19 +187,8 @@ router.post('/auth/register', authController.register)
  *                   type: string
  *               required:
  *                 - message
- *       '401':
- *         description: Unauthorized - Incorrect password or user not found
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 message:
- *                   type: string
- *               required:
- *                 - message
- *       '404':
- *         description: Not Found - E-mail not registered
+ *       '409':
+ *         description: Conflict - User already registered with this e-mail address
  *         content:
  *           application/json:
  *             schema:
@@ -273,8 +262,8 @@ router.post('/auth/login', authController.login)
  *                 - phone
  *                 - email
  *                 - birth
- *       '400':
- *         description: Bad request or validation error
+ *       '404':
+ *         description: E-mail not registered
  *         content:
  *           application/json:
  *             schema:
@@ -285,7 +274,7 @@ router.post('/auth/login', authController.login)
  *               required:
  *                 - message
  *       '401':
- *         description: Unauthorized - Authentication token missing or invalid
+ *         description: Password incorrect
  *         content:
  *           application/json:
  *             schema:

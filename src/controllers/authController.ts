@@ -11,7 +11,9 @@ export const authController = {
             const userAlreadyExists = await userService.findByEmail(email)
 
             if (userAlreadyExists !== null && userAlreadyExists !== undefined) {
-                throw new Error('This e-mail is already registered.')
+                return res
+                    .status(409)
+                    .json({ message: 'This e-mail is already registered.' })
             }
 
             const user = await userService.create({
