@@ -173,7 +173,7 @@ The project includes several npm scripts for various tasks. Here is a brief desc
 -   `db:seed:undo:all` : Undo all database seeding.
 -   `db:seed:admin` : Seed the database with an admin user.
 -   `db:drop` : Drop the entire database.
--   `db:test` : Run tests for the API endpoint.
+-   `test` : Run tests for the API endpoint.
 -   `dev`: Start the development server using ts-node-dev.
 -   `build` : Compile TypeScript source files into JavaScript.
 -   `start` : Start the server using the compiled JavaScript files in the dist directory.
